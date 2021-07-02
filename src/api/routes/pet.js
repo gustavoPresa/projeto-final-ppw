@@ -40,7 +40,7 @@ route.get('/:id', async(req,res,next) => {
         }
 
         
-        if(pet.protagonista && req.query.mostrar==="true") {            
+        if(pet.dono && req.query.mostrar==="true") {            
             try {
                 var dono = await axios.get('https://ppw2-final.herokuapp.com/donos/'+pet.dono)
                 if(dono.status === 200) {
